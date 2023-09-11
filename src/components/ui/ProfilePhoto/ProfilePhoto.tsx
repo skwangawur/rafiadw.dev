@@ -1,7 +1,11 @@
-import React from "react";
+interface ProfilePhotoProps {
+  url: string;
+  alt: string;
+}
 
-function ProfilePhoto() {
-  return <div>ProfilePhoto</div>;
+function ProfilePhoto(props: ProfilePhotoProps) {
+  const { url, alt } = props;
+  return <img className="w-24  mt-10 h-auto" src={url} alt={alt} />;
 }
 
 export default ProfilePhoto;
