@@ -1,7 +1,11 @@
-import React from "react";
+import BlogCard from "../../components/ui/BlogCard";
 
 function Blog() {
-  return <div>Blog</div>;
+  return (
+    <section className="group mt-7">
+      <BlogCard />
+    </section>
+  );
 }
 
 export default Blog;
