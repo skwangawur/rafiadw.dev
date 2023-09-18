@@ -1,24 +1,35 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 interface NavItemProps {
   item: string;
+  path: string;
   children: React.ReactNode;
-  activeItem?: boolean;
+  isActive?: boolean;
 }
 
 function NavItem(props: NavItemProps) {
-  const { item, children, activeItem } = props;
+  const { item, path, children, isActive } = props;
   return (
-    <li
-      className={`flex justify-center px-3 py-3 bg-dark-charcoal-gray w-[33%] rounded-2xl border-[1px] border-dark-slate-gray group hover:border-coral ${activeItem}`}
+    <Link
+      to={path}
+      className={`flex justify-center px-3 py-3 dark:coral  ${
+        isActive
+          ? "bg-dark-charcoal-gray dark:bg-orange-500 border-coral dark:border-white "
+          : "hover:bg-dark-slate-gray dark:hover:bg-orange-500 border-dark-slate-gray dark:border-white"
+      } w-[33%] rounded-2xl border-[1px] dark:border-[1px]  group `}
     >
-      <a href="" className="flex items-center" target="_blank">
+      <li className="flex items-center">
         {children}
-        <h4 className="hidden text-white  ml-3 md:block group-hover:text-coral">
+        <h4
+          className={`hidden dark:text-white   ml-3 md:block ${
+            isActive ? "text-coral " : "text-white"
+          }`}
+        >
           {item}
         </h4>
-      </a>
-    </li>
+      </li>
+    </Link>
   );
 }
 

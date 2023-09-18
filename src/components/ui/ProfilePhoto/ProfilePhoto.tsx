@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface ProfilePhotoProps {
   url: string;
   alt: string;
@@ -5,7 +7,15 @@ interface ProfilePhotoProps {
 
 function ProfilePhoto(props: ProfilePhotoProps) {
   const { url, alt } = props;
-  return <img className="w-24  mt-10 h-auto" src={url} alt={alt} />;
+  return (
+    <Link to="/" className="w-24 h-24 rounded-full overflow-hidden mt-10 ">
+      <img
+        className="w-full h-full  h-auto hover:scale-110 transition"
+        src={url}
+        alt={alt}
+      />
+    </Link>
+  );
 }
 
 export default ProfilePhoto;
