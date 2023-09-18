@@ -10,7 +10,7 @@ function ProfilePhoto(props: ProfilePhotoProps) {
   return (
     <Link to="/" className="w-24 h-24 rounded-full overflow-hidden mt-10 ">
       <img
-        className="w-full h-full  h-auto hover:scale-110 transition"
+        className="w-full h-full hover:scale-110 transition"
         src={url}
         alt={alt}
       />
