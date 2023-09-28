@@ -9,19 +9,17 @@ function Experiences() {
             <CareerJourney />
             <div className="h-[2px] w-full bg-dark-slate-gray mt-6"></div>
             <div className="flex flex-col gap-4 mt-4 overflow-y-auto">
-                {experiences.map((experience, index) => {
-                    const { meta } = experience;
-
+                {experiences?.map((experience, index) => {
                     return (
                         <ExperienceCard
                             key={index}
-                            companyImage={meta.companyImage}
-                            position={meta.position}
-                            company={meta.company}
-                            companyUrl={meta.companyUrl}
-                            location={meta.location}
-                            date={meta.date}
-                            duration={meta.duration}
+                            companyImage={experience.companyImage}
+                            position={experience.position}
+                            company={experience.company}
+                            companyUrl={experience.companyUrl}
+                            location={experience.location}
+                            date={experience.date}
+                            duration={experience.duration}
                         />
                     );
                 })}

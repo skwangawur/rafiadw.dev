@@ -4,15 +4,14 @@ import blogs from "@/content/blogs";
 function Blog() {
     return (
         <section className=" mt-7 flex flex-col gap-4 px-6">
-            {blogs.map((blog, idx) => {
-                const { meta } = blog;
+            {blogs?.map((blog, idx) => {
                 return (
                     <BlogCard
-                        date={meta.date}
-                        desc={meta.desc}
-                        imageUrl={meta.imageUrl}
-                        title={meta.title}
-                        url={meta.file}
+                        date={blog.date}
+                        desc={blog.desc}
+                        imageUrl={blog.imageUrl}
+                        title={blog.title}
+                        url={blog.file}
                         key={idx}
                     />
                 );
