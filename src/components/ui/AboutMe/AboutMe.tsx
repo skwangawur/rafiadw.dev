@@ -15,7 +15,6 @@ function AboutMe(props: AboutMeProps) {
     const [isChecked, setIsChecked] = React.useState<boolean>(true);
 
     const themes = window.localStorage.getItem("themes");
-    console.log(themes);
 
     const handleToggleChange = () => {
         setIsChecked(!isChecked);
