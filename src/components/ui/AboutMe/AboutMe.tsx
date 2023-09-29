@@ -14,8 +14,6 @@ interface AboutMeProps {
 function AboutMe(props: AboutMeProps) {
     const [isChecked, setIsChecked] = React.useState<boolean>(true);
 
-    const themes = window.localStorage.getItem("themes");
-
     const handleToggleChange = () => {
         setIsChecked(!isChecked);
         if (!isChecked) {
