@@ -3,7 +3,7 @@ import blogs from "@/content/blogs";
 
 function Blog() {
     return (
-        <section className=" mt-7 flex flex-col gap-4 px-6">
+        <section className=" mt-7 flex flex-col gap-4 px-4">
             {blogs?.map((blog, idx) => {
                 return (
                     <BlogCard

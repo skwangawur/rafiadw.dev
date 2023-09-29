@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { SiGithub, SiInstagram, SiLinkedin } from "@/assets/icon";
 import Button from "../Button";
-import SocialMedia from "./SocialMedia/SocialMedia";
+import SocialMedia from "../SocialMedia/SocialMedia";
 import Moon from "@/assets/images/moon 1.svg";
 import Sunny from "@/assets/images/sunny 1.svg";
 
@@ -71,12 +71,6 @@ function AboutMe(props: AboutMeProps) {
                                         className="absolute w-5 h-5 rounded-full shadow left-[2px] top-[2px] z-40 transition "
                                     />
                                 )}
-
-                                {/* <div
-                  className={`absolute w-4 h-4 rounded-full shadow left-[2px] top-[2px] transition ${
-                    isChecked ? "translate-x-[100%] bg-green-600" : "bg-white "
-                  } `}
-                ></div> */}
                             </div>
                         </div>
                     </label>

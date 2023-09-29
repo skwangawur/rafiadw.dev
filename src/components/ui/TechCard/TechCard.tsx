@@ -68,8 +68,14 @@ function TechStack({ tech }: { tech: string[] }) {
                     <SiCplusplus className="fill-blue-600" />
                 </Card>
             );
+        case "reactjs":
+            return (
+                <Card text={type}>
+                    <SiReact className="text-sky-500" />
+                </Card>
+            );
         default:
-            return null; // Mengembalikan null untuk teknologi yang tidak terdaftar
+            return ""; // Mengembalikan null untuk teknologi yang tidak terdaftar
         }
     };
 

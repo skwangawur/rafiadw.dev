@@ -1,11 +1,11 @@
 export interface ExperiencesCardProps {
-  companyImage: string;
-  position: string;
-  company: string;
-  companyUrl: string;
-  location: string;
-  date: string;
-  duration: string;
+    companyImage: string;
+    position: string;
+    company: string;
+    companyUrl: string;
+    location: string;
+    date: string;
+    duration: string;
 }
 
 function ExperienceCard(props: ExperiencesCardProps) {
@@ -20,14 +20,14 @@ function ExperienceCard(props: ExperiencesCardProps) {
     } = props;
     return (
         <div className="flex p-3 border border-dark-slate-gray rounded-2xl gap-6">
-            <div className="w-28 h-28 overflow-hidden rounded-md">
+            <div className=" h-28 overflow-hidden rounded-md w-2/5 md:w-1/4">
                 <img
                     className="w-full h-full object-cover"
                     src={companyImage}
                     alt={company}
                 />
             </div>
-            <div className="flex flex-col justify-evenly">
+            <div className="flex flex-col justify-evenly w-4/5 md:w-3/4">
                 <h2 className="text-white text-lg lg:text-2xl sm:text-xl font-bold group-hover:text-coral dark:text-charcoal-gray">
                     {position}
                 </h2>
