@@ -52,7 +52,7 @@ function AboutMe(props: AboutMeProps) {
                             />
                             <div
                                 className={`flex items-center w-[45px] h-[25px] bg-cover rounded-full transition-colors ${
-                                    isChecked ? "bg-night" : "bg-sky"
+                                    isChecked ? "bg-night" : "bg-blue-300"
                                 }`}
                             >
                                 {isChecked ? (
