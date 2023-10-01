@@ -1,14 +1,18 @@
 interface SosialMediaProps {
-  icon: React.ReactElement;
-  alt: string;
-  username: string;
-  link: string;
+    icon: React.ReactElement;
+    alt: string;
+    username: string;
+    link: string;
 }
 
 function SocialMedia(props: SosialMediaProps) {
     const { icon, username, link } = props;
     return (
-        <a href={link} className="flex items-center gap-2 ">
+        <a
+            href={link}
+            className="flex items-center gap-2 "
+            aria-label="social media link"
+        >
             <div className="flex justify-center items-center rounded-full bg-dark-charcoal-gray border-dark-slate-gray border-2 hover:outline outline-dark-slate-gray   w-8 h-8">
                 {icon}
             </div>
