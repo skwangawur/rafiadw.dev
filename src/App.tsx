@@ -1,6 +1,9 @@
+import * as React from "react";
 import "./App.css";
 import RoutesLink from "./routes/Routes";
-import * as React from "react";
+import { BrowserRouter } from "react-router-dom";
+
+import Meta from "./components/Meta";
 
 function App() {
     React.useEffect(() => {
@@ -8,7 +11,14 @@ function App() {
         console.log("  ( o.o ) ");
         console.log("   > ^ <  ");
     }, []);
-    return <RoutesLink />;
+
+    return (
+        <Meta>
+            <BrowserRouter>
+                <RoutesLink />
+            </BrowserRouter>
+        </Meta>
+    );
 }
 
 export default App;
