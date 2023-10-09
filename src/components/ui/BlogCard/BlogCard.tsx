@@ -27,12 +27,12 @@ function BlogCard(props: BlogCardProps) {
                     </p>
                 </div>
                 <Link to={`blogs/${url}`} className="flex">
-                    <h3 className="text-white text-xl sm:text-2xl xl:text-[28px]  font-bold group-hover:text-coral dark:text-charcoal-gray">
+                    <h1 className="text-white text-xl sm:text-2xl xl:text-[28px]  font-bold group-hover:text-coral dark:text-charcoal-gray">
                         <div className="line-clamp-2">{title}</div>
                         <RxExternalLink className="text-white group-hover:text-coral dark:text-charcoal-gray" />
-                    </h3>
+                    </h1>
                 </Link>
-                <p className="text-gray-500 text-[12px] sm:text-sm dark:text-charcoal-gray line-clamp-2">
+                <p className="text-gray-300 text-[12px] sm:text-sm dark:text-charcoal-gray line-clamp-2">
                     {desc}
                 </p>
             </div>

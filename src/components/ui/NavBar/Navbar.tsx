@@ -1,9 +1,5 @@
 import { useLocation } from "react-router-dom";
-import {
-    BsChatRightHeart,
-    MdWorkOutline,
-    SiOpenproject,
-} from "@/assets/icon";
+import { BsChatRightHeart, MdWorkOutline, SiOpenproject } from "@/assets/icon";
 import NavItem from "./NavItem/NavItem";
 
 function Navbar() {
@@ -16,18 +12,22 @@ function Navbar() {
         >
             <ul className="flex gap-2">
                 <NavItem
+                    ariaLabel="read about my blogs"
                     path="/"
                     item="Blogs"
                     isActive={pathname === "/"}
                     icon={
                         <BsChatRightHeart
                             className={`${
-                                pathname === "/" ? "text-coral dark:text-white" : "text-white"
+                                pathname === "/"
+                                    ? "text-coral dark:text-white"
+                                    : "text-white"
                             } `}
                         />
                     }
                 />
                 <NavItem
+                    ariaLabel="Read about my other project i built"
                     path="/projects"
                     item="Projects"
                     isActive={pathname === "/projects"}
@@ -43,6 +43,7 @@ function Navbar() {
                 />
 
                 <NavItem
+                    ariaLabel="it's about my journey"
                     path="/experiences"
                     item="Experiences"
                     isActive={pathname === "/experiences"}

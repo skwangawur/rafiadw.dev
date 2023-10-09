@@ -2,16 +2,18 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 interface NavItemProps {
-  item: string;
-  path: string;
-  icon: React.ReactElement;
-  isActive?: boolean;
+    item: string;
+    path: string;
+    icon: React.ReactElement;
+    isActive?: boolean;
+    ariaLabel: string;
 }
 
 function NavItem(props: NavItemProps) {
-    const { item, path, icon, isActive } = props;
+    const { item, path, icon, isActive, ariaLabel } = props;
     return (
         <Link
+            aria-label={ariaLabel}
             to={path}
             className={`flex justify-center px-3 py-3 dark:coral  ${
                 isActive
