@@ -12,7 +12,7 @@ interface AboutMeProps {
 }
 
 function AboutMe(props: AboutMeProps) {
-    const [isChecked, setIsChecked] = React.useState<boolean>(true);
+    const [isChecked, setIsChecked] = React.useState<boolean>(false);
 
     const handleToggleChange = () => {
         setIsChecked(!isChecked);
@@ -35,7 +35,7 @@ function AboutMe(props: AboutMeProps) {
             </h1>
             <div className="flex justify-center gap-4 items-center mt-4 lg:justify-start">
                 <div className="flex gap-2 items-baseline justify-center lg:justify-start">
-                    <div className="w-[5px] h-[5px] bg-green-400 hired rounded-full"></div>
+                    <div className="w-[5px] w- h-[5px]  hired rounded-full"></div>
                     <p className="text-slate-400 dark:text-slate-500 text-base">
                         available for hire.
                     </p>
@@ -73,7 +73,7 @@ function AboutMe(props: AboutMeProps) {
                     </label>
                 </div>
             </div>
-            <p className="text-md text-white w-[300px] lg:w-[80%] lg:text-sm xl:text-base mt-4 font-montserrat  dark:text-charcoal-gray">
+            <p className="text-md text-white lg:text-sm xl:text-base mt-4 font-montserrat dark:text-charcoal-gray">
                 {about}
             </p>
             <div className="flex gap-4 justify-center mt-5 lg:flex-col lg:justify-start">
