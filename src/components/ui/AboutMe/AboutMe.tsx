@@ -1,10 +1,9 @@
-import * as React from "react";
-
 import { SiGithub, SiInstagram, SiLinkedin } from "@/assets/icon";
 import Button from "../Button";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import Moon from "@/assets/images/moon 1.svg";
 import Sunny from "@/assets/images/sunny 1.svg";
+import { useDarkMode } from "@/hooks/useDarkMode";
 
 interface AboutMeProps {
     title: string;
@@ -12,20 +11,7 @@ interface AboutMeProps {
 }
 
 function AboutMe(props: AboutMeProps) {
-    const [isChecked, setIsChecked] = React.useState<boolean>(false);
-
-    const handleToggleChange = () => {
-        setIsChecked(!isChecked);
-        if (!isChecked) {
-            localStorage.setItem("themes", "dark");
-            document.body.style.backgroundColor = "#161b22";
-            document.documentElement.classList.remove("dark");
-        } else {
-            localStorage.setItem("themes", "light");
-            document.body.style.backgroundColor = "white";
-            document.documentElement.classList.add("dark");
-        }
-    };
+    const { isDark, handleDarkMode } = useDarkMode();
 
     const { title, about } = props;
     return (
@@ -47,15 +33,15 @@ function AboutMe(props: AboutMeProps) {
                                 type="checkbox"
                                 id="toggle"
                                 className="hidden"
-                                checked={isChecked}
-                                onChange={handleToggleChange}
+                                checked={isDark}
+                                onChange={handleDarkMode}
                             />
                             <div
                                 className={`flex items-center w-[45px] h-[25px] bg-cover rounded-full transition-colors ${
-                                    isChecked ? "bg-night" : "bg-blue-300"
+                                    isDark ? "bg-night" : "bg-blue-300"
                                 }`}
                             >
-                                {isChecked ? (
+                                {isDark ? (
                                     <img
                                         src={Moon}
                                         alt=""
