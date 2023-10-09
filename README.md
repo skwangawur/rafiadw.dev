@@ -2,7 +2,7 @@
 
 This project contain my blogs, project, and profile. If you want to collaborate with me, dont hesitate to contact me on Rafiadw@gmail.com
 
-![web](public/git.png)
+![web](public/readme.png)
 
 Source code of my personal web. Made using React Vite, Tailwind-CSS.
 
@@ -29,3 +29,4 @@ docker run -it rafiadw-web:v1
 -   React Vite
 -   Tailwind CSS
 -   MDX
+-   Typescript
