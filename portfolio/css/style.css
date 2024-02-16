@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  color: inherit;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+button,
+img,
+input,
+a,
+span,
+ion-icon {
+  display: block;
+}
+
+input {
+  font: inherit;
+  border: none;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  background-color: #161b22;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  height: auto;
+}
+
+body {
+  padding: 0 40px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column; /* Membuat elemen anak berada di bawah satu sama lain */
+  align-items: center;
+  text-align: center;
+}
+.header .photo {
+  margin: 30px auto;
+  width: 120px;
+  height: auto;
+}
+.header .about {
+  display: block;
+  color: #fff;
+}
+.header .about__name {
+  font-size: 2rem;
+  margin-bottom: 1.4rem;
+}
+.header .icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 24px 0;
+}
+.header .icons .icon__github span, .header .icons .icon__linkedln span, .header .icons .icon__instagram span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21262d;
+  border: 1px solid #2f363f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.header .icons .icon__github span:hover, .header .icons .icon__linkedln span:hover, .header .icons .icon__instagram span:hover {
+  transform: scale(1.2);
+}
+.header .icons .icon__github p, .header .icons .icon__linkedln p, .header .icons .icon__instagram p {
+  display: none;
+}
+.header button {
+  border-radius: 30px;
+  background-color: #21262d;
+  border: 1px solid #2f363f;
+  padding: 14px 22px 14px 22px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+.header button:hover {
+  border: 1px solid #f78166;
+  color: #f78166;
+}
+
+hr {
+  width: 100%;
+  margin: 28px 0;
+  border-color: #21262d;
+}
+
+.navbar {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(33, 38, 45, 0.6);
+  border-radius: 26px;
+}
+.navbar .nav {
+  display: flex;
+  gap: 10px;
+}
+.navbar .nav__blogs, .navbar .nav__projects, .navbar .nav__experiences {
+  display: flex;
+  justify-content: center;
+  padding: 14px 0;
+  background-color: #21262d;
+  width: 33%;
+  border-radius: 18px;
+  border: 1px solid #2f363f;
+}
+.navbar .nav__blogs h4, .navbar .nav__projects h4, .navbar .nav__experiences h4 {
+  display: none;
+  color: #fff;
+  margin-left: 12px;
+  font-weight: 400;
+}
+.navbar .nav__blogs.active, .navbar .nav__projects.active, .navbar .nav__experiences.active {
+  border: 1px solid #f78166;
+}
+.navbar .nav__blogs.active h4, .navbar .nav__projects.active h4, .navbar .nav__experiences.active h4 {
+  color: #f78166;
+}
+.navbar .nav__blogs.active .fill, .navbar .nav__projects.active .fill, .navbar .nav__experiences.active .fill {
+  fill: #f78166;
+}
+.navbar .nav__blogs.active .stroke, .navbar .nav__projects.active .stroke, .navbar .nav__experiences.active .stroke {
+  stroke: #f78166;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2f363f;
+  gap: 10px;
+  border-radius: 14px;
+  margin-top: 33px;
+}
+.card__image {
+  width: 30%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.card__image img {
+  height: 100%;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-content__date {
+  display: flex;
+  gap: 10px;
+}
+.card-content__date p {
+  font-size: 0.6rem;
+  color: #7d8590;
+}
+.card-content__title {
+  color: #fff;
+  font-size: 26px;
+}
+.card-content__description {
+  font-size: 0.8rem;
+  color: #7d8590;
+}
+
+@media (min-width: 480px) {
+  .header .about {
+    width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar .nav h4 {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .portofolio {
+    display: grid;
+    grid-template-columns: 400px 2fr;
+  }
+  .portofolio .biodata .about__description {
+    text-align: start;
+  }
+  .portofolio .biodata .icons {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 400px;
+  }
+  .portofolio .biodata .icons .icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+  }
+  .portofolio .biodata .icons .icon__github, .portofolio .biodata .icons .icon__linkedln, .portofolio .biodata .icons .icon__instagram {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .portofolio .biodata .icons .icon__github:hover, .portofolio .biodata .icons .icon__linkedln:hover, .portofolio .biodata .icons .icon__instagram:hover {
+    transform: scale(1.1);
+  }
+  .portofolio .biodata .icons .icon__github p, .portofolio .biodata .icons .icon__linkedln p, .portofolio .biodata .icons .icon__instagram p {
+    display: block;
+  }
+  .portofolio .biodata hr {
+    display: none;
+  }
+  .portofolio .menu .navbar {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1300px) {
+  .portofolio {
+    padding: 0 10vw;
+  }
+}
+@media (min-width: 1700px) {
+  .portofolio {
+    padding: 0 15vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

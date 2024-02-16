@@ -14,7 +14,7 @@ function RoutesLink() {
             <Route path="/" element={<LayoutLazy />}>
                 <Route index element={<BlogsLazy />} />
                 <Route path="projects" element={<ProjectstLazy />} />
-                <Route path="experiences" element={<ExperiencesLazy />} />
+                <Route path="me" element={<ExperiencesLazy />} />
             </Route>
             <Route path="/blogs/:id" index element={<DetailBlog />} />
             <Route path="*" element={<NotFound />} />

@@ -16,8 +16,7 @@ function Skills() {
                     </h1>
                 </div>
                 <p className="text-gray-500 font-poppins  text-md mt-2">
-                    The tool that I've used and am still learning, and of
-                    course, I still don't fully understand it.
+                    what I've learned and what I still don't understand?
                 </p>
                 <TechTools />
             </div>

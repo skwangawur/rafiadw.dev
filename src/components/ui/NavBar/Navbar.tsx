@@ -44,13 +44,13 @@ function Navbar() {
 
                 <NavItem
                     ariaLabel="it's about my journey"
-                    path="/experiences"
-                    item="Experiences"
-                    isActive={pathname === "/experiences"}
+                    path="/me"
+                    item="Me :)"
+                    isActive={pathname === "/me"}
                     icon={
                         <MdWorkOutline
                             className={`${
-                                pathname === "/experiences"
+                                pathname === "/me"
                                     ? "text-coral dark:text-white"
                                     : "text-white"
                             } `}

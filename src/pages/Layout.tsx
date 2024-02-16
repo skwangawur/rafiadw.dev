@@ -12,7 +12,7 @@ function Layout() {
                 <ProfilePhoto url={myImage} alt="profile photo rafi aditya" />
                 <AboutMe
                     title="Rafi Aditya"
-                    about="ITTelkom Surabaya graduate majoring in Information Technology who is interested in the world of programming, networking and embedded systems."
+                    about="ITTelkom Surabaya graduate majoring in Information Technology who is interested in programming, computer network, cyber security and embedded systems."
                 />
             </header>
             <main className="min-h-screen w-full lg:w-[70%] ml-auto">

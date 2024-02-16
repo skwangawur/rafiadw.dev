@@ -1,0 +1,40 @@
+export const metaBlog = {
+    imageUrl:
+        "https://res.cloudinary.com/dqoyjfyzt/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1708101213/OWASP-Blog-min_knwejs.png",
+    title: "Owasp (Open Web Application Security Project)",
+    desc: "OWASP, atau Open Web Application Security Project, adalah komunitas global yang fokus pada peningkatan keamanan perangkat lunak.",
+    date: "Feb 16, 2024",
+    file: "owasp",
+    author: "rafiadw",
+};
+
+<Header author={metaBlog.author} date={metaBlog.date} />
+
+# {metaBlog.title}
+
+OWASP, atau Open Web Application Security Project, adalah komunitas global yang fokus pada peningkatan keamanan perangkat lunak. Salah satu implementasi praktis dari OWASP adalah menggunakan panduan dan proyek-proyek yang mereka hasilkan untuk memitigasi risiko keamanan aplikasi web. Berikut adalah beberapa aspek implementasi OWASP
+
+<Image
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708101212/owasp-security-training-betabit-open-graph_rqzy7m.png"
+    alt={metaBlog.title}
+/>
+
+1. **Injection (Injeksi):** Penyerang memasukkan data berbahaya ke dalam input yang kemudian dieksekusi oleh aplikasi. Contoh: SQL Injection, NoSQL Injection, atau Command Injection.
+
+2. **Broken Authentication (Autentikasi Bermasalah):** Kelemahan dalam mekanisme autentikasi dan manajemen sesi. Contoh: Penggunaan password lemah, sesi yang tidak valid, atau kebijakan pengaturan ulang kata sandi yang buruk.
+
+3. **Sensitive Data Exposure (Paparan Data Sensitif):** Ketidaklindungan terhadap data sensitif selama penyimpanan atau transmisi. Contoh: Penggunaan enkripsi yang lemah atau tidak adanya enkripsi pada data penting.
+
+4. **XML External Entities (XXE):** Pemanfaatan kelemahan dalam pemrosesan XML yang dapat menyebabkan akses ke file sistem atau data sensitif.
+
+5. **Security Misconfigurations (Konfigurasi Keamanan Salah):** Kesalahan dalam konfigurasi yang dapat dieksploitasi oleh penyerang. Contoh: Pengaturan akses default yang terlalu lemah atau informasi sensitif yang dapat diakses oleh publik.
+
+6. **Cross-Site Scripting (XSS):** Penanaman skrip berbahaya di halaman web yang kemudian dieksekusi oleh pengguna. Contoh: Reflected XSS, Stored XSS, atau DOM-based XSS.
+
+7. **Insecure Direct Object References (IDOR):** Penyerang mengakses objek langsung tanpa memperoleh otorisasi. Contoh: Mengubah parameter URL untuk mengakses data pengguna lain.
+
+8. **Security Headers Not Set (Header Keamanan Tidak Ditetapkan):** Ketidaksetelan header keamanan HTTP yang dapat meningkatkan risiko keamanan. Contoh: Tidak menyertakan header seperti Content Security Policy (CSP) atau Strict-Transport-Security (HSTS).
+
+9. **Cross-Site Request Forgery (CSRF):** Penyerang dapat memaksa pengguna yang sudah login untuk melakukan tindakan tanpa persetujuan mereka. Contoh: Memaksa pengguna untuk mengirim permintaan HTTP yang tidak diinginkan.
+
+10. **Using Components with Known Vulnerabilities (Menggunakan Komponen dengan Kerentanan yang Diketahui):** Penggunaan perangkat lunak atau komponen dengan kerentanan yang diketahui dan belum diperbarui. Contoh: Menggunakan versi perangkat lunak yang sudah kadaluwarsa.
