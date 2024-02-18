@@ -2,8 +2,6 @@ import BlogCard from "../../components/ui/BlogCard";
 import blogs from "@/content/blogs";
 
 function Blog() {
-    console.log(blogs);
-
     return (
         <section className=" mt-7 flex flex-col gap-4 px-4">
             {blogs?.map((blog, idx) => {
