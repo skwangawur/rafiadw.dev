@@ -13,7 +13,7 @@ function DetailBlog() {
         <MDXProvider components={component}>
             <React.Suspense>
                 <article className="flex justify-center py-20 ">
-                    <section className="max-w-3xl border-2 border-dashed rounded-md border-dark-slate-gray p-6">
+                    <section className="max-w-4xl border-2 border-dashed rounded-md border-dark-slate-gray p-6">
                         <BlogLazy />
                     </section>
                 </article>

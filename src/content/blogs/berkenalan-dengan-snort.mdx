@@ -1,0 +1,180 @@
+export const metaBlog = {
+    imageUrl:
+        "https://res.cloudinary.com/dqoyjfyzt/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1708251640/snort-image-portada-180_fdn6ou.jpg",
+    title: "Berkenalan dengan Snort",
+    desc: "Snort adalah sebuah sistem deteksi intrusi open-source yang digunakan untuk mendeteksi aktivitas yang mencurigakan atau serangan pada jaringan komputer.",
+    date: "Feb 18, 2024",
+    file: "berkenalan-dengan-snort",
+    author: "rafiadw",
+};
+
+<Header author={metaBlog.author} date={metaBlog.date} />
+
+# {metaBlog.title}
+
+    <Image src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708251640/snort-image-portada-180_fdn6ou.jpg" alt="snort rules" />
+
+Snort adalah sebuah sistem deteksi intrusi open-source yang digunakan untuk mendeteksi aktivitas yang mencurigakan atau serangan pada jaringan komputer. Secara sederhana, Snort bertindak seperti "pengawas keamanan" yang memeriksa lalu lintas data yang melewati jaringan untuk menemukan pola atau tanda-tanda serangan yang mungkin terjadi.
+
+Snort bekerja dengan cara mengawasi paket-paket data yang bergerak di dalam jaringan, dan jika menemukan pola atau perilaku yang sesuai dengan rules-rules yang telah ditentukan sebelumnya, maka Snort akan memberikan peringatan atau tindakan yang ditentukan untuk mengatasi ancaman tersebut.
+
+Pengguna dapat mengonfigurasi Snort untuk mengenali berbagai jenis serangan, seperti serangan malware, upaya penetrasi, atau aktivitas jaringan yang mencurigakan lainnya. Snort dapat digunakan sebagai bagian dari strategi keamanan jaringan untuk membantu melindungi sistem dan data dari ancaman yang mungkin merugikan.
+
+### Cara Kerja Snort:
+
+1. **Pencatatan Paket (Packet Logging):** Snort menerima dan mencatat paket-paket data yang melewati antarmuka jaringan, baik dari lalu lintas langsung atau dari file pcap.
+
+2. **Penguraian (Packet Decoding):** Setiap paket yang diterima diuraikan untuk mendapatkan informasi tentang protokol, alamat sumber, alamat tujuan, dan informasi lainnya.
+
+3. **Pendeteksian (Detection):** Snort membandingkan karakteristik paket dengan rules-rules yang telah ditentukan sebelumnya. rules ini dapat mencakup pola-pola tanda tangan, perilaku jaringan yang mencurigakan, atau indikator ancaman lainnya.
+
+4. **Peringatan atau Aksi Pencegahan (Alert or Prevention):** Jika Snort mendeteksi sesuatu yang sesuai dengan rules, itu dapat menghasilkan peringatan, menghentikan koneksi, atau melakukan tindakan pencegahan lainnya sesuai konfigurasi.
+
+5. **Logging:** Snort mencatat aktivitas yang mencurigakan ke dalam file log, memberikan informasi tambahan untuk analisis dan tindakan lebih lanjut.
+
+Snort dapat dikonfigurasi untuk memonitor berbagai protokol dan digunakan untuk mendeteksi berbagai jenis serangan, termasuk serangan DoS (Denial of Service), serangan buffer overflow, dan banyak lagi. Keseluruhan, Snort adalah alat yang kuat untuk membantu menjaga keamanan jaringan dengan mendeteksi dan merespons ancaman potensial.
+
+### Instalasi Snort pada Ubuntu:
+
+1. **Pemasangan Dependensi:**
+
+    ```bash
+    sudo apt update
+    sudo apt install -y snort
+    ```
+
+2. **Konfigurasi Opsi Snort:**
+
+    ```bash
+    /etc/snort/snort.conf
+    ```
+
+3. **Uji Konfigurasi:**
+
+    ```bash
+    snort -T -c /etc/snort/snort.conf
+    ```
+
+    Opsi `-T` digunakan untuk menguji sintaks dan kesalahan konfigurasi tanpa menjalankan Snort secara aktif.
+
+4. **Download dan Update rules Snort:**
+
+    ```bash
+    sudo oinkmaster -C /etc/oinkmaster.conf -o /etc/snort/rules
+    ```
+
+    Pastikan Anda memiliki rules yang terkini. Penggunaan `oinkmaster` memungkinkan Anda mengelola rules dengan mudah.
+
+5. **Uji Snort dalam Mode Live:**
+    ```bash
+    sudo snort -A console -q -u snort -g snort -c /etc/snort/snort.conf -i <your_network_interface>
+    ```
+    Gantilah `<your_network_interface>` dengan antarmuka jaringan yang ingin Anda pantau. Mode `-A console` akan menampilkan peringatan ke konsol.
+
+### Snort Command Option
+
+```bash
+# -c atau --config    # Menentukan jalur ke file konfigurasi Snort.
+snort -c /path/to/snort.conf
+
+# -i atau --interface    # Menentukan antarmuka jaringan untuk pemantauan dan analisis paket secara langsung.
+snort -i eth0
+
+# -A atau --alert-mode    # Mengatur mode peringatan untuk mengontrol tingkat detail dalam pesan peringatan.
+snort -A fast
+
+# -q atau --quiet    # Menjalankan Snort dalam mode diam, menekan keluaran banner dan tumpukan paket.
+snort -q
+
+# -l atau --logdir    # Menentukan direktori tempat Snort menyimpan file log.
+snort -l /path/to/log/directory
+
+# -r atau --pcap-file    # Membaca dan memproses paket dari file PCAP yang ditentukan.
+snort -r /path/to/file.pcap
+
+# -k atau --kill-memcache    # Menjalankan Snort dengan opsi kill-memcache.
+snort -k
+
+# -p atau --pid-path    # Menentukan jalur tempat Snort menyimpan file PID.
+snort -p /path/to/pid/file
+
+# -u atau --user    # Menentukan pengguna yang akan menjalankan Snort.
+snort -u snort_user
+
+# -g atau --group    # Menentukan grup pengguna yang akan menjalankan Snort.
+snort -g snort_group
+
+# -N atau --no-promisc    # Menonaktifkan mode promiskuitas pada antarmuka jaringan.
+snort -N
+
+# -F atau --pcap-filter    # Menentukan filter pcap untuk memproses paket yang spesifik.
+snort -F "tcp port 80"
+
+# -e atau --alert-mode    # Menentukan log alert yang spesifik (fast, full, console).
+snort -e fast
+
+# -T atau --list-modes    # Menampilkan daftar mode yang didukung oleh Snort.
+snort -T
+
+# -t atau --test-mode    # Menjalankan Snort dalam mode pengujian untuk memverifikasi konfigurasi.
+snort -t
+
+# -X atau --daq-dir    # Menentukan direktori DAQ yang digunakan oleh Snort.
+snort -X /path/to/daq/directory
+
+# -L atau --list-dynamic-engines    # Menampilkan daftar engine dinamis yang didukung oleh Snort.
+snort -L
+
+# -z atau --core-dump-dir    # Menentukan direktori untuk menyimpan file core dump.
+snort -z /path/to/core/dump/directory
+
+# -U atau --unicorn    # Menjalankan Snort dengan modul Unicornscan.
+snort -U
+
+# -T atau --no-termination    # Mencegah Snort dari menghentikan proses setelah 10 detik.
+snort -T
+```
+
+### Cara Membuat rules di Snort:
+
+1. **Lokasi File rules:**
+
+    - rules Snort biasanya ditempatkan di **/etc/snort/rules/**. Jika belum ada, buat file rules di sini.
+
+2. **Format rules:**
+
+    <Image
+        src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708251658/Screenshot_from_2024-02-18_14-26-48_gwncsm.png"
+        alt="snort rules"
+    />
+
+    - Format umum rules:
+        ```plaintext
+        action protocol source_ip/source_port -> destination_ip/destination_port (options)
+        ```
+    - Contoh rules sederhana:
+        ```plaintext
+        alert tcp any any -> any 80 (msg:"HTTP traffic detected"; sid:100001;)
+        ```
+
+3. **Membuat rules:**
+
+    - Buka atau buat file rules baru, misalnya `local.rules` di `/etc/snort/rules/`.
+    - Tambahkan rules baru sesuai format yang diinginkan.
+
+4. **Contoh rules Tambahan:**
+
+    - rules mendeteksi ping:
+
+        ```plaintext
+        alert icmp any any -> any any (msg:"Ping Detected"; sid:100002;)
+        ```
+
+    - rules mendeteksi file sharing SMB:
+        ```plaintext
+        alert tcp any any -> any 445 (msg:"SMB File Sharing Detected"; sid:100003;)
+        ```
+
+5. **Website untuk membuat rules:**
+
+    **[Snorpy](http://snorpy.cyb3rs3c.net/)**
