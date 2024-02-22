@@ -19,10 +19,12 @@ h4,
 h5,
 h6 {
     font-family: "Montserrat", "sans-serif";
+    overflow-wrap: break-word;
 }
 
 p {
     font-family: "Poppins", "sans-serif";
+    overflow-wrap: break-word;
 }
 
 .wave {
@@ -60,4 +62,20 @@ p {
         transform: scale(1.1);
         background-color: transparent;
     }
+}
+
+@media only screen and (width < 600px) {
+    pre,
+    code {
+        width: 300px;
+    }
+    /* Tambahkan perubahan gaya lainnya untuk perangkat seluler di sini */
+}
+
+@media only screen and (width > 600px) {
+    pre,
+    code {
+        width: 500px;
+    }
+    /* Tambahkan perubahan gaya lainnya untuk perangkat seluler di sini */
 }

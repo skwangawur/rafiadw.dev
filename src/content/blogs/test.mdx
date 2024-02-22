@@ -1,0 +1,42 @@
+export const metaBlog = {
+    imageUrl:
+        "https://res.cloudinary.com/dqoyjfyzt/image/upload/v1695714058/1_ZKxvDYnWuSoY5_hmJ8shiA_jt5gvv.webp",
+    title: "Test MDX",
+    desc: "Feedback is an important part of making us grow and be better than before. ",
+    date: "Apr 3, 2022",
+    file: "test",
+    author: "Rafiadw",
+};
+
+# Just testing out [Code Hike](https://codehike.org/)
+
+Some normal `markdown`
+
+## Annotation Example
+
+## Focus Example
+
+```js next.config.js focus=1:2,7
+const { remarkCodeHike } = require("@code-hike/mdx");
+const theme = require("shiki/themes/monokai.json");
+
+const withMDX = require("@next/mdx")({
+    extension: /\.mdx?$/,
+    options: {
+        remarkPlugins: [[remarkCodeHike, { theme }]],
+        rehypePlugins: [],
+    },
+});
+
+module.exports = withMDX({
+    pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+});
+```
+
+```js index.js box=1[25:39]
+console.log("Some code. I am annotated!");
+```
+
+```js index.js box=1[25:39]
+console.log("Some code. I am annotated!");
+```
