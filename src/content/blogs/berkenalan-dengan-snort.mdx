@@ -73,67 +73,67 @@ Snort dapat dikonfigurasi untuk memonitor berbagai protokol dan digunakan untuk 
 
 ### Snort Command Option
 
-```bash
-# -c atau --config    # Menentukan jalur ke file konfigurasi Snort.
-snort -c /path/to/snort.conf
+    ```bash
+    # -c atau --config    # Menentukan jalur ke file konfigurasi Snort.
+    snort -c /path/to/snort.conf
 
-# -i atau --interface    # Menentukan antarmuka jaringan untuk pemantauan dan analisis paket secara langsung.
-snort -i eth0
+    # -i atau --interface    # Menentukan antarmuka jaringan untuk pemantauan dan analisis paket secara langsung.
+    snort -i eth0
 
-# -A atau --alert-mode    # Mengatur mode peringatan untuk mengontrol tingkat detail dalam pesan peringatan.
-snort -A fast
+    # -A atau --alert-mode    # Mengatur mode peringatan untuk mengontrol tingkat detail dalam pesan peringatan.
+    snort -A fast
 
-# -q atau --quiet    # Menjalankan Snort dalam mode diam, menekan keluaran banner dan tumpukan paket.
-snort -q
+    # -q atau --quiet    # Menjalankan Snort dalam mode diam, menekan keluaran banner dan tumpukan paket.
+    snort -q
 
-# -l atau --logdir    # Menentukan direktori tempat Snort menyimpan file log.
-snort -l /path/to/log/directory
+    # -l atau --logdir    # Menentukan direktori tempat Snort menyimpan file log.
+    snort -l /path/to/log/directory
 
-# -r atau --pcap-file    # Membaca dan memproses paket dari file PCAP yang ditentukan.
-snort -r /path/to/file.pcap
+    # -r atau --pcap-file    # Membaca dan memproses paket dari file PCAP yang ditentukan.
+    snort -r /path/to/file.pcap
 
-# -k atau --kill-memcache    # Menjalankan Snort dengan opsi kill-memcache.
-snort -k
+    # -k atau --kill-memcache    # Menjalankan Snort dengan opsi kill-memcache.
+    snort -k
 
-# -p atau --pid-path    # Menentukan jalur tempat Snort menyimpan file PID.
-snort -p /path/to/pid/file
+    # -p atau --pid-path    # Menentukan jalur tempat Snort menyimpan file PID.
+    snort -p /path/to/pid/file
 
-# -u atau --user    # Menentukan pengguna yang akan menjalankan Snort.
-snort -u snort_user
+    # -u atau --user    # Menentukan pengguna yang akan menjalankan Snort.
+    snort -u snort_user
 
-# -g atau --group    # Menentukan grup pengguna yang akan menjalankan Snort.
-snort -g snort_group
+    # -g atau --group    # Menentukan grup pengguna yang akan menjalankan Snort.
+    snort -g snort_group
 
-# -N atau --no-promisc    # Menonaktifkan mode promiskuitas pada antarmuka jaringan.
-snort -N
+    # -N atau --no-promisc    # Menonaktifkan mode promiskuitas pada antarmuka jaringan.
+    snort -N
 
-# -F atau --pcap-filter    # Menentukan filter pcap untuk memproses paket yang spesifik.
-snort -F "tcp port 80"
+    # -F atau --pcap-filter    # Menentukan filter pcap untuk memproses paket yang spesifik.
+    snort -F "tcp port 80"
 
-# -e atau --alert-mode    # Menentukan log alert yang spesifik (fast, full, console).
-snort -e fast
+    # -e atau --alert-mode    # Menentukan log alert yang spesifik (fast, full, console).
+    snort -e fast
 
-# -T atau --list-modes    # Menampilkan daftar mode yang didukung oleh Snort.
-snort -T
+    # -T atau --list-modes    # Menampilkan daftar mode yang didukung oleh Snort.
+    snort -T
 
-# -t atau --test-mode    # Menjalankan Snort dalam mode pengujian untuk memverifikasi konfigurasi.
-snort -t
+    # -t atau --test-mode    # Menjalankan Snort dalam mode pengujian untuk memverifikasi konfigurasi.
+    snort -t
 
-# -X atau --daq-dir    # Menentukan direktori DAQ yang digunakan oleh Snort.
-snort -X /path/to/daq/directory
+    # -X atau --daq-dir    # Menentukan direktori DAQ yang digunakan oleh Snort.
+    snort -X /path/to/daq/directory
 
-# -L atau --list-dynamic-engines    # Menampilkan daftar engine dinamis yang didukung oleh Snort.
-snort -L
+    # -L atau --list-dynamic-engines    # Menampilkan daftar engine dinamis yang didukung oleh Snort.
+    snort -L
 
-# -z atau --core-dump-dir    # Menentukan direktori untuk menyimpan file core dump.
-snort -z /path/to/core/dump/directory
+    # -z atau --core-dump-dir    # Menentukan direktori untuk menyimpan file core dump.
+    snort -z /path/to/core/dump/directory
 
-# -U atau --unicorn    # Menjalankan Snort dengan modul Unicornscan.
-snort -U
+    # -U atau --unicorn    # Menjalankan Snort dengan modul Unicornscan.
+    snort -U
 
-# -T atau --no-termination    # Mencegah Snort dari menghentikan proses setelah 10 detik.
-snort -T
-```
+    # -T atau --no-termination    # Mencegah Snort dari menghentikan proses setelah 10 detik.
+    snort -T
+    ```
 
 ### Cara Membuat rules di Snort:
 

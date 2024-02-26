@@ -1,0 +1,90 @@
+export const metaBlog = {
+    imageUrl:
+        "https://res.cloudinary.com/dqoyjfyzt/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1708614312/B14858_04_01_aqseo8.png",
+    title: "Cyber Kill Chain, IoA, dan IoC",
+    desc: "SIEM, EDR dan NDR. Pilar penting dalam SOC",
+    date: "Feb 26cl, 2024",
+    file: "siem-edr-ndr",
+    author: "Rafiadw",
+};
+
+<Header author={metaBlog.author} date={metaBlog.date} />
+
+# SOC Visibility Triad
+
+<Image
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708868152/Screenshot-2023-02-09-at-12.57.00_qsfek1.png"
+    alt="SOC Visibility Thread"
+/>
+
+Deteksi Ancaman SOC adalah kemampuan dan kegiatan yang dilakukan oleh tim Pusat Operasi Keamanan (SOC) untuk mengidentifikasi potensi ancaman keamanan. Ini mencakup penggunaan teknologi seperti Security Information and Event Management (SIEM), Endpoint Detection and Response (EDR), Network Detection and Response (NDR), dan alat keamanan siber lainnya. Tim SOC menggunakan aturan dan analisis perilaku untuk mengidentifikasi aktivitas mencurigakan atau anormal yang dapat mengindikasikan serangan atau pelanggaran keamanan.
+
+## Proses Deteksi Ancaman SOC
+
+    1. **Pemantauan:** Memantau secara terus-menerus aktivitas jaringan, sistem, dan endpoint.
+    2. **Analisis:** Menganalisis data log, lalu lintas jaringan, dan perilaku pengguna untuk mengidentifikasi pola atau tanda-tanda ancaman.
+    3. **Respons:** Merespons dengan cepat terhadap ancaman yang terdeteksi, termasuk mengisolasi endpoint, memblokir alamat IP yang mencurigakan, atau mengambil langkah-langkah lain yang diperlukan.
+    4. **Forensik:** Melakukan investigasi lebih lanjut untuk memahami sumber dan dampak dari ancaman.
+
+Dengan melakukan Deteksi Ancaman SOC, organisasi dapat secara efektif mengurangi risiko serangan siber dan merespons dengan cepat terhadap potensi ancaman keamanan. Proses ini melibatkan kewaspadaan yang konstan, analisis, dan respons proaktif untuk memastikan keamanan informasi dan aset bisnis.
+
+## Teknologi yang Digunakan dalam Deteksi Ancaman SOC
+
+-   **SIEM (Security Information and Event Management):** Mengumpulkan dan menganalisis data log dari berbagai sumber untuk deteksi ancaman secara real-time.
+
+-   **EDR (Endpoint Detection and Response):** Memantau dan merespons aktivitas mencurigakan di endpoint, memberikan data berharga untuk identifikasi ancaman.
+
+-   **NDR (Network Detection and Response):** Mendeteksi dan merespons aktivitas jaringan yang mencurigakan, menggunakan kombinasi nonsignature.
+
+Tim SOC mengandalkan teknologi ini untuk meningkatkan kemampuan mereka dalam mendeteksi, menganalisis, dan merespons terhadap ancaman keamanan siber yang terus berkembang. Kombinasi teknologi, aturan, dan keahlian manusia membentuk pertahanan yang tangguh terhadap potensi insiden keamanan.
+
+## SIEM (Security Information Event Management)
+
+<Image
+    className="w-52"
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708868110/73_s4f2ss.png"
+    alt=" SIEM (Security Information Event Management)"
+/>
+
+**Security Information and Event Management (SIEM)** adalah solusi yang membantu organisasi mendeteksi, menganalisis, dan merespons ancaman keamanan sebelum membahayakan operasi bisnis. SIEM, dibaca "sim", menggabungkan manajemen informasi keamanan (SIM) dan manajemen kejadian keamanan (SEM) menjadi satu sistem manajemen keamanan. Teknologi SIEM mengumpulkan data log kejadian dari berbagai sumber, mengidentifikasi aktivitas yang menyimpang dari norma dengan analisis real-time, dan mengambil tindakan yang tepat. Singkatnya, SIEM memberi organisasi visibilitas tentang aktivitas di dalam jaringan agar dapat merespons potensi serangan cyber dengan cepat dan memenuhi persyaratan kepatuhan. Dalam sepuluh tahun terakhir, teknologi SIEM telah berkembang dengan memanfaatkan kecerdasan buatan untuk membuat deteksi ancaman dan respons insiden lebih cerdas serta lebih cepat.
+
+### Cara Kerja SIEM
+
+Alat SIEM mengumpulkan, menggabungkan, dan menganalisis volume data dari aplikasi, perangkat, server, dan pengguna organisasi secara real-time sehingga tim keamanan dapat mendeteksi dan memblokir serangan. Alat SIEM menggunakan aturan yang telah ditentukan untuk membantu tim keamanan menentukan ancaman dan menghasilkan peringatan.
+
+## EDR (Endpoint Detection and Response)
+
+<Image
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708943123/PillarPage_EDR-Process_ik3hdk.webp"
+    alt="EDR (Endpoint Detection and Response)"
+/>
+
+**Endpoint Detection and Response (EDR)** adalah alat yang bisa memantau endpoint kita pada setiap perilaku yang mencurigakan, memperingatkan kita jika disusupi, serta memberikan data bermanfaat dan analisis perilaku yang akan mempermudah kita dalam mengidentifikasi penyerang, juga merespons dengan tepat, sehingga kita dapat mencegah kerusakan lebih lanjut. Ini adalah komponen penting dari departemen keamanan siber yang tepat karena tidak hanya berfokus pada pencegahan serangan, tetapi juga menyediakan kemampuan mitigasi dalam mengurangi kerusakan akibat disusupi penyerang.
+
+### Cara Kerja EDR
+
+1. Pemantauan endpoint dan pengumpulan data
+2. Kemampuan respons
+3. Investigasi forensik dan analisis perilaku
+
+## NDR (Network Detection and Response)
+
+<Image
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708868145/Screenshot-2023-02-09-at-12.57.29_fpek4l.png"
+    alt="NDR (Network Detection and Response)"
+/>
+
+**Network Detection and Response (NDR)** dalam Cyber Security, atau lebih dikenal dengan Network Detection and Response, adalah alat yang bisa mendeteksi aktivitas jaringan yang mencurigakan. Alat ini menggunakan kombinasi nonsignature untuk mendeteksi dan merespon traffic yang tidak wajar atau berbahaya.
+
+### Cara Kerja NDR
+
+NDR akan bekerja secara terus-menerus melakukan analisis traffic jaringan Anda. Analisis ini dilakukan untuk mendapatkan data mentah sebagai dasar perilaku jaringan secara normal. Nantinya, NDR akan mendeteksi traffic atau kegiatan mencurigakan yang tidak sesuai dengan kebiasaan jaringan. Alat NDR yang mendeteksi adanya ancaman ini akan memberikan laporan peringatan kepada tim cyber.
+
+### Teknik Nonsignature dalam NDR
+
+Beberapa teknik nonsignature yang umum digunakan dalam Network Detection and Response (NDR) melibatkan:
+
+    1. **Analisis Anomali:** Menganalisis pola lalu lintas jaringan dan perilaku pengguna untuk mendeteksi aktivitas yang tidak biasa atau mencurigakan.
+    2. **Machine Learning:** Menggunakan algoritma pembelajaran mesin untuk memodelkan pola normal dan mengidentifikasi deviasi yang mencurigakan.
+    3. **Behavioral Analysis:** Memantau dan menganalisis perilaku perangkat lunak, perangkat keras, atau pengguna untuk mendeteksi aktivitas yang tidak sesuai dengan kebiasaan.
+    4. **Heuristics:** Menerapkan aturan atau logika berbasis pengalaman dan pengetahuan untuk mengidentifikasi potensi ancaman.

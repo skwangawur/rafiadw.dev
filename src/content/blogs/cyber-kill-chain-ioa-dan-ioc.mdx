@@ -1,0 +1,67 @@
+export const metaBlog = {
+    imageUrl:
+        "https://res.cloudinary.com/dqoyjfyzt/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1708614312/B14858_04_01_aqseo8.png",
+    title: "Cyber Kill Chain, IoA, dan IoC",
+    desc: "Berkenalan dengan Cyber Kill Chain dan apa perbedaan IoC, IoA",
+    date: "Feb 22, 2024",
+    file: "cyber-kill-chain-ioa-dan-ioc",
+    author: "Rafiadw",
+};
+
+<Header author={metaBlog.author} date={metaBlog.date} />
+
+## Cyber Kill Chain
+
+<Image
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708613826/Cyber-Kill-Chain-6_q65n3t.png"
+    alt="Cyber Kill Chain"
+/>
+
+Cyber Kill Chain merupakan sebuah konsep atau framework untuk memahami taktik, teknik, dan prosedur dalam serangan cyber. Cyber Kill Chain juga dapat membantu untuk memahami, mencegah upaya apa saja yang dilakukan penyerang dan penanganan apa yang harus dilakukan sebelum terjadi serangan. Cyber Kill Chain dibagi menjadi 7 step:
+
+1. **Reconnaissance (Menyelidiki):** Mengumpulkan informasi tentang target seperti
+2. **Weaponization:** Membuat atau mendapatkan payload berbahaya seperti menggunakan tools yang ada, memodifikasi ransomware atau membuat alat cyber kill chain baru
+3. **Delivery:** Mengirimkan payload berbahaya pada target yang telah ditemukan kerentanan pada tahap sebelumnya seperti mengirimkan email yang terdapat malware (phishing), atau masuk ke dalam jaringan target.
+4. **Exploitation:** Mengambil keuntungan pada kerentanan target dengan mengesekusi payload/malware untuk mendapatkan akses pada sistem atau jaringan
+5. **Installation:** Menginstall malware atau alat cyber lainnya untuk mengambil alih sistem seperti trojan horses, backdoors, atau command injection
+6. **Command and Control:** Melakukan komunikasi dengan payload alat cyber yang telah terinstal atau komputer yang telah terinfeksi malware.
+7. **Action on Objectives:** Melakukan tujuan dari penyerang
+
+### Bagaimana konsep Cyber Kill Chain membantu dalam memahami serangan Cyber:
+
+-   **Visualisasi Serangan:** Cyber Kill Chain membantu organisasi melihat langkah-langkah serangan dari awal hingga akhir.
+-   **Identifikasi Titik Kritis:** Membantu mengidentifikasi titik-titik kritis di dalam proses serangan untuk fokus pertahanan.
+-   **Pengembangan Strategi dan Pertahanan:** Memberikan kerangka kerja untuk mengembangkan strategi dan pertahanan di setiap tahap serangan.
+-   **Kemampuan Tanggap Insiden:** Meningkatkan kemampuan tanggap insiden dengan mengetahui di mana serangan dapat dihentikan atau dicegah.
+
+### ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)
+
+<Image
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708613786/Screenshot_from_2024-02-22_21-19-55_eytuaz.png"
+    alt="ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)"
+/>
+
+ATT&CK berfokus pada bagaimana penyerang berinteraksi selama operasi penyerangan, siklus terjadinya serangan, dan platform/sistem yang pernah terjadi serangan. ATT&CK merupakan model bagaimana mengkategorikan perilaku penyerang. Komponen utama model ini meliputi:
+
+-   **Taktik:** Merepresentasikan "Why" atau alasan penyerang melakukan aksinya.
+-   **Teknik:** Merepresentasikan "How" atau bagaimana penyerang melakukan tindakan untuk mencapai tujuannya.
+-   **Prosedur:** Pengimplementasian teknik atau sub teknik penyerang.
+
+### Hubungan Cyber Kill Chain dan ATT&CK:
+
+Cyber Kill Chain merupakan konsep bagaimana penyerang melakukan serangan dan ATT&CK Mitre adalah pengetahuan teknik-teknik yang digunakan dalam konsep atau kerangka Cyber Kill Chain dalam serangannya di dunia nyata.
+
+## IOA VS IOC
+
+<Image
+    src="https://res.cloudinary.com/dqoyjfyzt/image/upload/v1708613824/IOAvIOC-1-768x579_fqagf4.jpg"
+    alt="IOC vs IOA"
+/>
+
+### Indicators of Attack (IoA)
+
+Indicators of Attack (IoA) merujuk pada tanda-tanda atau gejala terhadap upaya suatu serangan atau percobaan yang terjadi pada jaringan atau sistem. IoA fokus pada perilaku atau log yan tidak biasa pada lalu lintas jaringan yang terindikasi adanya ancaman keamanan
+
+### Indicators of Compromise (IoC)
+
+Indicator of Compromise (IOC) merujuk pada bukti pada sistem bahwa telah terjadi pelanggaran keamanan atau serangan pada jaringan atau sistem. Security Engineer biasanya mengumpulkan bukti setelah diberi tahu adanya insiden yang mencurigakan. Idealnya informasi yang dikumpulkan seperti alamat IP jenis file dapat digunakan untuk mencegah insiden serupa terjadi di masa depan
